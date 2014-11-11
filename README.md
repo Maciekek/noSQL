@@ -171,5 +171,5 @@ $ db.geoAlabama.find({ loc: {$geoWithin: {$center: [  [ -90.5683234,31.985376],1
 ```
 
 Wynik: [zobacz](json/5.json)
-Mapka: [zobacz](geojson/circle.geojson.geojson)
+Mapka: [zobacz](geojson/circle.geojson)
 
