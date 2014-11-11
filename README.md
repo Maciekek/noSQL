@@ -4,6 +4,9 @@
 - [Starting MongoDB](#starting-mongodb)
 - [Short replies](#short-replies)
 - [Extended Replies](#extended-replies)
+    - [1a](#1a-1)
+    - [1c](#1c-1)
+    - [1d](#1d-1)
     
 
 # System info
