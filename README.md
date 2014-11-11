@@ -2,8 +2,8 @@
 
 - [System info](#system-info)
 - [Short replies](#short-replies)
-- [Starting MongoDB](#Starting-MongoDB)
-- [Extended Replies](#Extended-Replies)
+- [Starting MongoDB](#starting-mongodb)
+- [Extended Replies](#extended-replies)
     
 
 # System info
