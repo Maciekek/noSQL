@@ -136,7 +136,7 @@ Mapka: [zobacz](geojson/1near.geojson)
 #2
 Znajdź punkty w określonym współrzędnymi polu:
 ```
->$ db.geoAlabama.find({
+$ db.geoAlabama.find({
     loc: {
         $geoWithin: {
             $polygon: [
@@ -159,7 +159,7 @@ Znajdź punkty w określonym współrzędnymi polu:
             ]
         }
     }
->})
+})
 ```
 Wynik: [zobacz](json/2.json)
 Mapka: [zobacz](geojson/2polygon.geojson)
