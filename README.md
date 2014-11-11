@@ -1,8 +1,8 @@
 # Table of content
 
 - [System info](#system-info)
-- [Short replies](#short-replies)
 - [Starting MongoDB](#starting-mongodb)
+- [Short replies](#short-replies)
 - [Extended Replies](#extended-replies)
     
 
@@ -15,6 +15,11 @@ RAM: 4GB
 ```
 
 
+#Starting MongoDB
+
+```bash
+mongod --smallfiles --dbpath path_to_cluster
+```
 
 # Short replies
 ##1a
@@ -60,11 +65,6 @@ RAM: 4GB
 > ```
 
 
-#Starting MongoDB
-
-```bash
-mongod --smallfiles --dbpath path_to_cluster
-```
 
 # Extended Replies
 
@@ -91,8 +91,16 @@ mongod --smallfiles --dbpath path_to_cluster
 
 ## 1c
 
-> UZUP
-> 
+> [Skrypt](convert.js) 
+
+> Skrypt zmieniający format danych String na tablice tagów, wykrywanie odbywa się po spacji
+>  ```
+>   $ node convert.js    
+>  ```
+
+>  real  14m31.145s                                                                                                          
+>  user  09m11.126s                                                                                                          
+>  sys   0m11.127s                                                                                                                  
 
 
 ## 1d
@@ -109,7 +117,7 @@ Import danych do bazy:
 ```
 $mongoimport -c geo -type csv -file geo.txt --headerline
 ```
-Przygotowanie kolekcji ``geo`` [convertToJSON.js]()
+Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
 ```
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
