@@ -1,0 +1,47 @@
+{
+	"_id": ObjectId("54613818d2ed2daf885a2041"),
+	"id": 112854,
+	"name": "Hales Creek",
+	"type": "Stream",
+	"country_name": null,
+	"height": 247,
+	"loc": {
+		"type
+": "Point",
+		"coordinates": [-86.3905392, 34.0064863]
+	}
+} {
+	"_id": ObjectId("54613818d2ed2daf885a2039"),
+	"id": 112845,
+	"name": "Dry Creek",
+	"type": "Stream",
+	"country_name": null,
+	"height": 149,
+	"loc": {
+		"type": "Point",
+		"coordinates": [-86.5683234, 33.985376]
+	}
+} {
+	"_id": ObjectId("54613818d2ed2daf885a2038"),
+	"id": 112844,
+	"name": "Cornelius Mountain",
+	"type": "Summit",
+	"country_name": null,
+	"height": 296,
+	"loc": {
+		"type": "Point",
+		"coordinates": [-86.5366558, 33.9992646]
+	}
+} {
+	"_id": ObjectId("54613818d2ed2daf885a2036"),
+	"id": 112842,
+	"name": "Copeland Creek",
+	"type": "Stream",
+	"country_name": null,
+	"height": 190,
+	"loc": {
+		"t
+ype": "Point",
+		"coordinates": [-86.5811027, 34.1542634]
+	}
+}
