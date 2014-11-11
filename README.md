@@ -282,3 +282,12 @@ Mapka: [zobacz](geojson/circle.geojson)
 }
 ```
 
+
+# Podsumowanie czasów
+
+|  Czynność | Czas rzeczywisty  |   |   |   |
+|-----------|-------------------|---|---|---|
+|           |                   |   |   |   |
+|           |                   |   |   |   |
+|           |                   |   |   |   |
+
