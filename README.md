@@ -26,46 +26,46 @@ mongod --smallfiles --dbpath path_to_cluster
 
 # Short replies
 ##1a
-> ```text 
-> Zadanie 1a polega na zaimportowaniu, do baz danych
-> uruchomionych na swoim komputerze, danych z pliku Train.csv 
-> ```
-> 
-> ```  
->  $ time 2unix.sh Train.csv TrainPrepare.csv   
->  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
-> ```
+```text 
+Zadanie 1a polega na zaimportowaniu, do baz danych
+uruchomionych na swoim komputerze, danych z pliku Train.csv 
+```
+
+```  
+ $ time 2unix.sh Train.csv TrainPrepare.csv   
+ $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
+```
 
 
 
 ##1b
 
-> ```
-> Zliczyć liczbę zaimportowanych rekordów
-> ```
-> ```   
-> $ db.train.count()
-> ```
+ ```
+ Zliczyć liczbę zaimportowanych rekordów
+ ```
+ ```   
+ $ db.train.count()
+ ```
 
 ##1c
->```
->Zamienić string zawierający tagi na tablicę napisów z tagami następnie zliczyć wszystkie tagi i wszystkie różne tagi.
->``` 
->```
-> $ npm install
-> $ node skrypt.js
->```
+```
+Zamienić string zawierający tagi na tablicę napisów z tagami następnie zliczyć wszystkie tagi i wszystkie różne tagi.
+``` 
+```
+ $ npm install
+ $ node skrypt.js
+```
 
 ##1d
 
-> ```
-> Wyszukać w sieci dane zawierające obiekty GeoJSON. Następnie dane
-> zapisać w bazie MongoDB.
-> 
-> Dla zapisanych danych przygotować co najmniej 6 różnych geospatial
-> queries (w tym, co najmniej po jednym, dla obiektów Point, LineString
-> i Polygon).
-> ```
+```
+Wyszukać w sieci dane zawierające obiekty GeoJSON. Następnie dane
+zapisać w bazie MongoDB.
+ 
+Dla zapisanych danych przygotować co najmniej 6 różnych geospatial
+queries (w tym, co najmniej po jednym, dla obiektów Point, LineString
+i Polygon).
+```
 
 
 
@@ -73,37 +73,38 @@ mongod --smallfiles --dbpath path_to_cluster
 
 ##1a
 
-> ```  
->  $ time 2unix.sh Train.csv TrainPrepare.csv   
-> ```
->  
->  real  22m2.507s  
->  user  3m32.282s  
->  sys   2m22.363s
->  
+```  
+ $ time 2unix.sh Train.csv TrainPrepare.csv   
+```
+ 
+ real  22m2.507s  
+ user  3m32.282s  
+ sys   2m22.363s
+ 
 
 
-> ```  
->   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
-> ```
->  
->  real  uzup
->  user uzup
->  sys uzup
->  
+```  
+  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
+```
+ 
+ real  uzup
+ user uzup
+ sys uzup
+ 
 
 ## 1c
 
-> [Skrypt](convert.js) 
+[Skrypt](convert.js) 
 
-> Skrypt zmieniający format danych String na tablice tagów, wykrywanie odbywa się po spacji
->  ```
->   $ node convert.js    
->  ```
-
->  real  14m31.145s                                                                                                          
->  user  09m11.126s                                                                                                          
->  sys   0m11.127s                                                                                                                  
+Skrypt zmieniający format danych String na tablice tagów, wykrywanie odbywa się po spacji
+```
+ $ node convert.js    
+```
+```
+real  14m31.145s                                                                                                          
+user  09m11.126s                                                                                                          
+sys   0m11.127s                                                                                                                  
+```
 
 
 ## 1d
