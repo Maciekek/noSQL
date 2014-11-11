@@ -7,7 +7,7 @@
     - [1a](#1a-1)
     - [1c](#1c-1)
     - [1d](#1d-1)
-- [Podsumowanie czasów](#podsumowanie-czasów)
+- [Podsumowanie czasów](#podsumowanie-czasowe)
 
     
 
@@ -291,7 +291,7 @@ Mapka: [zobacz](geojson/circle.geojson)
 ```
 
 
-# Podsumowanie czasów
+# Podsumowanie czasowe
 
 |  Czynność             | Czas rzeczywisty  | 
 |-----------------------|-------------------|
