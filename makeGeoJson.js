@@ -36,7 +36,7 @@ db.open(function(err) {
               },
               "properties": {
                 "title": item.name,
-                "description": item.type,
+                "description": item.type
                
                
               }
