@@ -115,5 +115,20 @@ $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
 ```
 1
-Find points beetwen 100 and 65000 meters
+Znajdz punkty w odległość od 100 do 65000
 Query:
+```
+db.geoAlabama.find({ loc: {$nearSphere:{$geometry:punkt,$minDistance:100,$maxD
+istance:65000}}})
+```
+
+Wynik: [zobacz](json/1.json)
+
+2
+Znajdź punkty w określonym współrzędnymi polu:
+```
+ db.geoAlabama.find({ loc:{$geoWithin: {$polygon:[ [-88.3822308,33.3579777],[-8
+6.2504893,33.5718352],[-86.7569171,34.9495258],[ -84.8747566,34.7098128]  ] }}})
+```
+Wynik: [zobacz](json/2.json)
+
