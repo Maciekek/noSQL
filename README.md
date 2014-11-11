@@ -2,17 +2,9 @@
 
 - [System info](#system-info)
 - [Short replies](#short-replies)
-	- [1a](##1a)
-	- [1b](##1b)
-	- [1c](##1c)
-	- [1d](##1d)
 - [Starting MongoDB](#Starting-MongoDB)
 - [Extended Replies](#Extended-Replies)
-    - [1a](##1a)
-	- [1b](##1b)
-	- [1c](##1c)
-	- [1d](##1d)
-
+    
 
 # System info
 
