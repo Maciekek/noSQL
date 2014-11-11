@@ -114,21 +114,31 @@ Przygotowanie kolekcji ``geo`` [convertToJSON.js]()
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
 ```
-1
+#1
 Znajdz punkty w odległość od 100 do 65000
 Query:
 ```
-db.geoAlabama.find({ loc: {$nearSphere:{$geometry:punkt,$minDistance:100,$maxD
+$ db.geoAlabama.find({ loc: {$nearSphere:{$geometry:punkt,$minDistance:100,$maxD
 istance:65000}}})
 ```
 
 Wynik: [zobacz](json/1.json)
 
-2
+#2
 Znajdź punkty w określonym współrzędnymi polu:
 ```
- db.geoAlabama.find({ loc:{$geoWithin: {$polygon:[ [-88.3822308,33.3579777],[-8
+$ db.geoAlabama.find({ loc:{$geoWithin: {$polygon:[ [-88.3822308,33.3579777],[-8
 6.2504893,33.5718352],[-86.7569171,34.9495258],[ -84.8747566,34.7098128]  ] }}})
 ```
 Wynik: [zobacz](json/2.json)
+
+
+#3
+Znajdź 3 najbliższe punkty typu rzeka/strumień
+```
+$ db.geoAlabama.find({loc: {$near: {$geometry: punkt}}, type:"Stream"}).limit(3)
+```
+
+Wynik: [zobacz](json/3.json)
+
 
