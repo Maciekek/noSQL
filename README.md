@@ -89,8 +89,14 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
+
+real 39m2.516s
+user 11m45.381s
+sys  3m11m127s
  
 Całkowity czas imporotowania do bazy to: 39m16s
+
+
 Na monitorze zasobów start importera jest bardzo dobrze widoczny: 
 ![import- start](img/mongoimportStart.png)
 Przy importowaniu komputer był bardzo obciążony. Praktycznie przez cały proces importu nie dało się z niego korzystać.
@@ -285,9 +291,9 @@ Mapka: [zobacz](geojson/circle.geojson)
 
 # Podsumowanie czasów
 
-|  Czynność | Czas rzeczywisty  |   |   |   |
-|-----------|-------------------|---|---|---|
-|           |                   |   |   |   |
-|           |                   |   |   |   |
-|           |                   |   |   |   |
+|  Czynność             | Czas rzeczywisty  | 
+|-----------------------|-------------------|
+|Zmiana kodowania       |   22m2.507s       | 
+|Import                 |   39m2.516s       |  
+|Konwertowanie          |   14m31.145s      |  
 
