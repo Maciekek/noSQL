@@ -1,0 +1,72 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Polygon",
+               "coordinates": [
+             [ [-87.3822308,34.3579777],[-86.2504893,33.5718352],[-86.7569171,34.9495258],[ -86.8747566,34.7098128]   ]
+             ]
+            },
+            "properties": {
+                "prop0": "value0",
+                "prop1": {
+                    "this": "that"
+                }
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                     -86.5513796, 34.2059293
+                ]
+            },
+            "properties": {
+                "title": "Beckworth Branch",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                   -86.5811027, 34.1542634 
+                ]
+            },
+            "properties": {
+                "title": "Copeland Creek",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -86.5366558, 33.9992646
+                ]
+            },
+            "properties": {
+                "title": "Cornelius Mountain",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                   -86.677218, 34.5062034
+                ]
+            },
+            "properties": {
+                "title": "GivensBranch",
+                "description": "Stream"
+            }
+        }
+    ]
+}

@@ -1,0 +1,57 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                     -86.8877693, 33.4698294
+                ]
+            },
+            "properties": {
+                "title": "Nabors Branch",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -86.6905413, 33.2742799
+                ]
+            },
+            "properties": {
+                "title": "homas Branch",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                 -87.3586122, 33.4506682
+                ]
+            },
+            "properties": {
+                "title": "Island Branch",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                   -86.8877693,33.5698294
+                ]
+            },
+            "properties": {
+                "title": "MAIN POINT",
+                "description": "Stream"
+            }
+        }
+    ]
+}

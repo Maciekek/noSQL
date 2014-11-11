@@ -1,0 +1,13 @@
+{
+	"name": "NoSQL",
+	"author": "Maciej Kucharski",
+	"repository":"https://github.com/Maciekek/noSQL",
+	"version": "0.0.1",
+	"scripts": {
+		"start": "node convert-tags.js"
+	},
+	"dependencies": {
+		"mongodb": "*",
+		"fs":"*"
+	}
+}
