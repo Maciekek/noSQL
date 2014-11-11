@@ -81,7 +81,8 @@ i Polygon).
  user  3m32.282s  
  sys   2m22.363s
  
-
+Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby komputer do takich operacji), jednak jak widać po zdjęciu system zostawił sobie trochę pamięci to innych procesów:
+![test][img/2unixUsage.png]
 
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
