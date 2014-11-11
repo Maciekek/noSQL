@@ -1,0 +1,45 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                 -88.2389162, 32.5143039
+                ]
+            },
+            "properties": {
+                "title": "Bear Creek",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -88.2180652, 31.4265553
+                ]
+            },
+            "properties": {
+                "title": "Miles Creek",
+                "description": "Stream"
+            }
+        },
+         {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -90.5683234,31.985376
+                ]
+            },
+            "properties": {
+                "title": "MAIN POINT",
+                "description": "Stream"
+            }
+        }
+       
+    ]
+}

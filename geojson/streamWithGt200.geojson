@@ -1,0 +1,32 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                 -86.3905392, 34.0064863
+                ]
+            },
+            "properties": {
+                "title": "Hales Creek",
+                "description": "Stream"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -87.7705869, 34.3737074
+                ]
+            },
+            "properties": {
+                "title": "Scharnagle Branch",
+                "description": "Stream"
+            }
+        }
+       
+    ]
+}
