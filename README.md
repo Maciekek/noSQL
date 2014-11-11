@@ -8,6 +8,7 @@
     - [1c](#1c-1)
     - [1d](#1d-1)
 - [Podsumowanie czasów](#podsumowanie-czasów)
+
     
 
 # System info
