@@ -72,7 +72,7 @@ i Polygon).
 # Extended Replies
 
 ##1a
-
+##### Zmiana kodowanie
 ```  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
 ```
@@ -82,15 +82,25 @@ i Polygon).
  sys   2m22.363s
  
 Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby komputer do takich operacji), jednak jak widać po zdjęciu system zostawił sobie trochę pamięci to innych procesów:
-![test][img/2unixUsage.png]
+![zużycie pamięci przez 2unixUsage](img/2unixUsage.png)
 
+
+##### Import danych do bazy
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
  
- real  uzup
- user uzup
- sys uzup
+Całkowity czas imporotowania do bazy to: 39m16s
+Na monitorze zasobów start importera jest bardzo dobrze widoczny: 
+![import- start](img/mongoimportStart.png)
+Przy importowaniu komputer był bardzo obciążony. Praktycznie przez cały proces importu nie dało się z niego korzystać.
+![import- pratyczne zawalenie komputer](img/afterImport.png)
+Co ciekawe, nawet po zakończonym imporcie, proces mongoimport nie zwolnił używanej przez siebie pamięci. Nawet godzinę po zakończonym imporcie komputer był bardzo spowolniony. Pomógł dopiero restart systemu.
+
+Ciekawą rzecz można również zaobserwować gdy odłączy się laptopa od zasilacza. Ewidentnie spada wtedy wydajność komputera co widać na obrazku:
+![komputer na baterii](img/unplaged.png)
+
+
  
 
 ## 1c
