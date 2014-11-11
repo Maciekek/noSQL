@@ -4,6 +4,9 @@
 - [Starting MongoDB](#starting-mongodb)
 - [Short replies](#short-replies)
 - [Extended Replies](#extended-replies)
+    - [1a](#1a-1)
+    - [1c](#1c-1)
+    - [1d](#1d-1)
     
 
 # System info
@@ -122,7 +125,7 @@ Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
 ```
-#1
+##1
 Znajdz punkty w odległość od 100 do 65000
 Query:
 ```
@@ -133,29 +136,70 @@ istance:65000}}})
 Wynik: [zobacz](json/1.json)
 Mapka: [zobacz](geojson/1near.geojson)
 
-#2
+##2
 Znajdź punkty w określonym współrzędnymi polu:
 ```
-$ db.geoAlabama.find({ loc:{$geoWithin: {$polygon:[ [-88.3822308,33.3579777],[-8
-6.2504893,33.5718352],[-86.7569171,34.9495258],[ -84.8747566,34.7098128]  ] }}})
+$ db.geoAlabama.find({
+    loc: {
+        $geoWithin: {
+            $polygon: [
+                [
+                    -88.3822308,
+                    33.3579777
+                ],
+                [
+                    -86.2504893,
+                    33.5718352
+                ],
+                [
+                    -86.7569171,
+                    34.9495258
+                ],
+                [
+                    -84.8747566,
+                    34.7098128
+                ]
+            ]
+        }
+    }
+})
 ```
 Wynik: [zobacz](json/2.json)
 Mapka: [zobacz](geojson/2polygon.geojson)
 
-#3
+##3
 Znajdź 3 najbliższe punkty typu rzeka/strumień
 ```
-$ db.geoAlabama.find({loc: {$near: {$geometry: punkt}}, type:"Stream"}).limit(3)
+$ db.geoAlabama.find({
+    loc: {
+        $near: {
+            $geometry: punkt
+        }
+    },
+    type: "Stream"
+}).limit(3)
 ```
 
 Wynik: [zobacz](json/3.json)
 Mapka: [zobacz](geojson/nearestPoint.geojson)
 
 
-#4
+##4
 Znajdz puknty w wycinku kołowym określonym stopniami 
 ```
-$ db.geoAlabama.find({ loc: {$geoWithin: {$centerSphere: [  [ -86.5683234,33.985376],13/3959]}}})
+$ db.geoAlabama.find({
+    loc: {
+        $geoWithin: {
+            $centerSphere: [
+                [
+                    -86.5683234,
+                    33.985376
+                ],
+                13/3959
+            ]
+        }
+    }
+})
 ```
 
 
@@ -163,21 +207,66 @@ Wynik: [zobacz](json/4.json)
 Mapka: [zobacz](geojson/circlePoints.geojson)
 
 
-#5
+##5
 Punkty typu rzeka/strumień znajdujące się powyżej 230m
 ```
-$ db.geoAlabama.find({loc: {$near: {$geometry: punkt}}, type:"Stream", height:{$gt:230}})
+$ db.geoAlabama.find({
+    loc: {
+        $near: {
+            $geometry: punkt
+        }
+    },
+    type: "Stream",
+    height: {
+        $gt: 230
+    }
+})
 ```
 
 Wynik: [zobacz](json/5.json)
 Mapka: [zobacz](geojson/streamWithGt200.geojson)
 
-#6
+##6
 Punkty w wycinku kołowym z wykorzystaniem "center"
 ``` 
-$ db.geoAlabama.find({ loc: {$geoWithin: {$center: [  [ -90.5683234,31.985376],10/4]}}})
+$ db.geoAlabama.find({
+    loc: {
+        $geoWithin: {
+            $center: [
+                [
+                    -90.5683234,
+                    31.985376
+                ],
+                10/4
+            ]
+        }
+    }
+})
 ```
 
 Wynik: [zobacz](json/5.json)
 Mapka: [zobacz](geojson/circle.geojson)
+
+#Dodatkowe informacje o kolekcji geoAlabama:
+```
+{
+        "ns" : "test.geoAlabama",
+        "count" : 51,
+        "size" : 12240,
+        "avgObjSize" : 240,
+        "storageSize" : 22507520,
+        "numExtents" : 7,
+        "nindexes" : 2,
+        "lastExtentSize" : 11325440,
+        "paddingFactor" : 1,
+        "systemFlags" : 1,
+        "userFlags" : 1,
+        "totalIndexSize" : 16352,
+        "indexSizes" : {
+                "_id_" : 8176,
+                "loc_2dsphere" : 8176
+        },
+        "ok" : 1
+}
+```
 
