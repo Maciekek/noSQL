@@ -145,7 +145,7 @@ Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
 ```
-##1
+#####1
 Znajdz punkty w odległość od 100 do 65000
 Query:
 ```
@@ -156,7 +156,7 @@ istance:65000}}})
 Wynik: [zobacz](json/1.json)
 Mapka: [zobacz](geojson/1near.geojson)
 
-##2
+#####2
 Znajdź punkty w określonym współrzędnymi polu:
 ```
 $ db.geoAlabama.find({
@@ -187,7 +187,7 @@ $ db.geoAlabama.find({
 Wynik: [zobacz](json/2.json)
 Mapka: [zobacz](geojson/2polygon.geojson)
 
-##3
+#####3
 Znajdź 3 najbliższe punkty typu rzeka/strumień
 ```
 $ db.geoAlabama.find({
@@ -204,7 +204,7 @@ Wynik: [zobacz](json/3.json)
 Mapka: [zobacz](geojson/nearestPoint.geojson)
 
 
-##4
+#####4
 Znajdz puknty w wycinku kołowym określonym stopniami 
 ```
 $ db.geoAlabama.find({
@@ -227,7 +227,7 @@ Wynik: [zobacz](json/4.json)
 Mapka: [zobacz](geojson/circlePoints.geojson)
 
 
-##5
+#####5
 Punkty typu rzeka/strumień znajdujące się powyżej 230m
 ```
 $ db.geoAlabama.find({
@@ -246,7 +246,7 @@ $ db.geoAlabama.find({
 Wynik: [zobacz](json/5.json)
 Mapka: [zobacz](geojson/streamWithGt200.geojson)
 
-##6
+#####6
 Punkty w wycinku kołowym z wykorzystaniem "center"
 ``` 
 $ db.geoAlabama.find({
