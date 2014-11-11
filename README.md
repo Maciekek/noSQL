@@ -124,7 +124,7 @@ Prepare collection ``geo`` [convertToJSON.js]()
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
 ```
-
+1
 Find points beetwen 100 and 65000 meters
 Query: 
 > db.geo_points.find({ loc: {$nearSphere:{$geometry:punkt,$minDistance:100,$maxD
@@ -141,7 +141,7 @@ ek", "type" : "Stream", "country_name" : null, "height" : 149, "loc" : { "type"
 : "Point", "coordinates" : [ -86.5683234, 33.985376 ] } }
 
 View: []()
-
+2
 Find point in square:
 >> db.geo_points.find({ loc:{$geoWithin: {$polygon:[ [-88.3822308,33.3579777],[-8
 6.2504893,33.5718352],[-86.7569171,34.9495258],[ -84.8747566,34.7098128]  ] }}})
@@ -165,7 +165,7 @@ e" : "Point", "coordinates" : [ -86.4116516, 34.1481515 ] } }
 
 View: []()
 
-
+3
 Find 3 nearest Stream 
 > $ db.geo_points.find({loc: {$near: {$geometry: punkt}}, type:"Stream"}).limit(3)
 
@@ -181,6 +181,46 @@ Branch", "type" : "Stream", "country_name" : null, "height" : 67, "loc" : { "typ
 e" : "Point", "coordinates" : [ -87.3586122, 33.4506682 ] } }
 
 
+4
+Find points in circle
+> $ db.geo_points.find({ loc: {$geoWithin: {$centerSphere: [  [ -86.5683234,33.985376],13/3959]}}})
+
+Result:
+
+{ "_id" : ObjectId("54613818d2ed2daf885a2041"), "id" : 112854, "name" : "Hales Creek", "type" : "Stream", "country_name" : null, "height" : 247, "loc" : { "type
+" : "Point", "coordinates" : [ -86.3905392, 34.0064863 ] } }
+{ "_id" : ObjectId("54613818d2ed2daf885a2039"), "id" : 112845, "name" : "Dry Creek", "type" : "Stream", "country_name" : null, "height" : 149, "loc" : { "type"
+: "Point", "coordinates" : [ -86.5683234, 33.985376 ] } }
+{ "_id" : ObjectId("54613818d2ed2daf885a2038"), "id" : 112844, "name" : "Cornelius Mountain", "type" : "Summit", "country_name" : null, "height" : 296, "loc" :
+{ "type" : "Point", "coordinates" : [ -86.5366558, 33.9992646 ] } }
+{ "_id" : ObjectId("54613818d2ed2daf885a2036"), "id" : 112842, "name" : "Copeland Creek", "type" : "Stream", "country_name" : null, "height" : 190, "loc" : { "t
+ype" : "Point", "coordinates" : [ -86.5811027, 34.1542634 ] } }
+>
 
 
+5 
+> db.geo_points.find({loc: {$near: {$geometry: punkt}}, type:"Stream", height:{$gt:230}})
 
+Result:
+> db.geo_points.find({loc: {$near: {$geometry: punkt}}, type:"Stream", height:{$
+gt:230}})
+{ "_id" : ObjectId("54613818d2ed2daf885a2041"), "id" : 112854, "name" : "Hales C
+reek", "type" : "Stream", "country_name" : null, "height" : 247, "loc" : { "type
+" : "Point", "coordinates" : [ -86.3905392, 34.0064863 ] } }
+{ "_id" : ObjectId("54613818d2ed2daf885a2052"), "id" : 112871, "name" : "Scharna
+gle Branch", "type" : "Stream", "country_name" : null, "height" : 234, "loc" : {
+ "type" : "Point", "coordinates" : [ -87.7705869, 34.3737074 ] } }
+>
+
+6
+> db.geo_points.find({ loc: {$geoWithin: {$center: [  [ -90.5683234,31.985376],1
+0/4]}}})
+
+Result:
+{ "_id" : ObjectId("54613818d2ed2daf885a202d"), "id" : 112833, "name" : "Bear Cr
+eek", "type" : "Stream", "country_name" : null, "height" : 36, "loc" : { "type"
+: "Point", "coordinates" : [ -88.2389162, 32.5143039 ] } }
+{ "_id" : ObjectId("54613818d2ed2daf885a2047"), "id" : 112860, "name" : "Miles C
+reek", "type" : "Stream", "country_name" : null, "height" : 28, "loc" : { "type"
+ : "Point", "coordinates" : [ -88.2180652, 31.4265553 ] } }
+>
