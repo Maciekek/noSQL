@@ -157,6 +157,7 @@ Wynik: [zobacz](json/1.json)
 Mapka: [zobacz](geojson/1near.geojson)
 
 #####2
+---------
 Znajdź punkty w określonym współrzędnymi polu:
 ```
 $ db.geoAlabama.find({
@@ -188,6 +189,7 @@ Wynik: [zobacz](json/2.json)
 Mapka: [zobacz](geojson/2polygon.geojson)
 
 #####3
+-------
 Znajdź 3 najbliższe punkty typu rzeka/strumień
 ```
 $ db.geoAlabama.find({
@@ -205,6 +207,7 @@ Mapka: [zobacz](geojson/nearestPoint.geojson)
 
 
 #####4
+--------
 Znajdz puknty w wycinku kołowym określonym stopniami 
 ```
 $ db.geoAlabama.find({
@@ -228,6 +231,7 @@ Mapka: [zobacz](geojson/circlePoints.geojson)
 
 
 #####5
+--------
 Punkty typu rzeka/strumień znajdujące się powyżej 230m
 ```
 $ db.geoAlabama.find({
@@ -247,6 +251,7 @@ Wynik: [zobacz](json/5.json)
 Mapka: [zobacz](geojson/streamWithGt200.geojson)
 
 #####6
+--------
 Punkty w wycinku kołowym z wykorzystaniem "center"
 ``` 
 $ db.geoAlabama.find({
