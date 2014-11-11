@@ -247,3 +247,26 @@ $ db.geoAlabama.find({
 Wynik: [zobacz](json/5.json)
 Mapka: [zobacz](geojson/circle.geojson)
 
+Dodatkowe informacje o kolekcji geoAlabama:
+```
+{
+        "ns" : "test.geoAlabama",
+        "count" : 51,
+        "size" : 12240,
+        "avgObjSize" : 240,
+        "storageSize" : 22507520,
+        "numExtents" : 7,
+        "nindexes" : 2,
+        "lastExtentSize" : 11325440,
+        "paddingFactor" : 1,
+        "systemFlags" : 1,
+        "userFlags" : 1,
+        "totalIndexSize" : 16352,
+        "indexSizes" : {
+                "_id_" : 8176,
+                "loc_2dsphere" : 8176
+        },
+        "ok" : 1
+}
+```
+
