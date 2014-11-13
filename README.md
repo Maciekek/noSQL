@@ -197,28 +197,32 @@ Importowanie zajęło 29 minut i 21 sekund.
    
 |  Rodzaj               | Czas              | 
 |-----------------------|-------------------|
-|real                   |   14m31.145s      | 
-|user                   |   09m11.126s      |  
-|sys                    |   0m11.127s       | 
+|real                   |   18m31.145s      | 
+|user                   |   01m11.126s      |  
+|sys                    |   0m15.127s       | 
 
 
 
 ## 1d
 
 ##### Opis:
-Zbiór danych: http://geonames.usgs.gov/docs/stategaz/AL_Features_20141005.zip
+Zbiór danych: http://geonames.usgs.gov/docs/stategaz/AL_Features_20141005.zip  
 
-Przygotowanie danych: 
+Zbiór zawiera dane na temat punktów szczegołnych (takich jak rzeka, czy cmentarz) w wybranym przeze mnie stanie w Stanach Zjednoczonych (dokładnie Alabama)
+Sciągniętą paczkę trzeba wypakować i odpowiednio dane przygotować do współpracy.
+
+
+###### Przygotowanie danych: 
 
 ```
 $ tr tr '|' ',' < AL_Features_20141005.txt > geo.txt
 ```
 
-Import danych do bazy:
+###### Import danych do bazy:
 ```
 $mongoimport -c geo -type csv -file geo.txt --headerline
 ```
-Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
+###### Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
 ```
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
