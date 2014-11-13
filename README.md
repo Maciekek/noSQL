@@ -123,7 +123,7 @@ Ciekawą rzecz można również zaobserwować gdy odłączy się laptopa od zasi
 ```
  $ node convert.js    
 ```
-```
+
    
 |  Rodzaj               | Czas              | 
 |-----------------------|-------------------|
@@ -131,7 +131,6 @@ Ciekawą rzecz można również zaobserwować gdy odłączy się laptopa od zasi
 |user                   |   09m11.126s      |  
 |sys                    |   0m11.127s       | 
 
-```
 
 
 ## 1d
