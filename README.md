@@ -33,14 +33,14 @@ Zadanie 1a polega na zaimportowaniu, do baz danych
 uruchomionych na swoim komputerze, danych z pliku Train.csv 
 ```
 ###MongoDB:
-```  
+```sh  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
 
 ###PostgreSQL 
 
-```
+```SQL
 CREATE TABLE train(
    id TEXT PRIMARY KEY     NOT NULL,
    Title           TEXT,
@@ -57,8 +57,17 @@ copy train(Id,Title,Body,Tags) from 'C:\Train.csv' with delimiter ',' csv header
  ```
  Zliczyć liczbę zaimportowanych rekordów
  ```
- ```   
+ 
+####MongoDB
+ ```bash   
  $ db.train.count()
+ ```
+ 
+
+####PostgreSQL
+ ```SQL
+ select count(*) from train;
+ > 6034195
  ```
 
 ##1c
@@ -86,7 +95,7 @@ i Polygon).
 # Extended Replies
 
 ##1a
-##### Zmiana kodowanie
+### Zmiana kodowanie
 ```sh  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
 ```
@@ -101,8 +110,8 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 ![zużycie pamięci przez 2unixUsage](img/2unixUsage.png)
 
 
-##### Import danych do bazy
-######MongoDB
+###Import danych do bazy
+####MongoDB
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
@@ -125,8 +134,31 @@ Co ciekawe, nawet po zakończonym imporcie, proces mongoimport nie zwolnił uży
 Ciekawą rzecz można również zaobserwować gdy odłączy się laptopa od zasilacza. Ewidentnie spada wtedy wydajność komputera co widać na obrazku:
 ![komputer na baterii](img/unplaged.png)
 
+#####Statystyki dla kolekcji "train"
+```json
+> db.train.stats()
+{
+        "ns" : "test.train",
+        "count" : 2017332,
+        "size" : 3550925520,
+        "avgObjSize" : 1760,
+        "storageSize" : 4841103360,
+        "numExtents" : 23,
+        "nindexes" : 1,
+        "lastExtentSize" : 1257897984,
+        "paddingFactor" : 1,
+        "systemFlags" : 1,
+        "userFlags" : 1,
+        "totalIndexSize" : 65465232,
+        "indexSizes" : {
+                "_id_" : 65465232
+        },
+        "ok" : 1
+}
+```
 
-######PostgreSQL
+
+####PostgreSQL
 
 Importowanie zajęło 29 minut i 21 sekund.
 
@@ -137,7 +169,29 @@ Importowanie zajęło 29 minut i 21 sekund.
 
 [Skrypt](convert.js)  zmieniający format danych String na tablice tagów, wykrywanie odbywa się po spacji
 ```
+ $ npm install
  $ node convert.js    
+```
+
+#####Przykładowy rekord po puszczeniu [Skrypt](convert.js)
+```json
+{
+  "_id" : ObjectId("526e9eea0d0994b3ea766bc5"),
+  "Id" : 1,
+  "Title" : "How to check if an uploaded file is an image without mime type?",
+  "Body" : "<p>I'd like to check if an uploaded file is an image file (e.g png, jpg, jpeg, gif, bmp)
+  or another file. The   problem is that I'm using Uploadify to upload the files, which changes the
+  mime type and gives a 'text/octal' or    something as the mime type, no matter which file type you
+  upload.</p>  <p>Is there a way to check if the uploaded file    is an image apart from checking the
+  file extension using PHP?</p> ",
+  "Tags" : [
+    "php",
+    "image-processing",
+    "file-upload",
+    "upload",
+    "mime-types"
+  ]
+}
 ```
 
    
