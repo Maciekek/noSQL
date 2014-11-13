@@ -1,21 +1,18 @@
 {
 	"_id": ObjectId("54613818d2ed2daf885a2041"),
 	"id": 112854,
-	"name": "Hales C
-reek",
+	"name": "Hales Creek",
 	"type": "Stream",
 	"country_name": null,
 	"height": 247,
 	"loc": {
-		"type
-": "Point",
+		"type": "Point",
 		"coordinates": [-86.3905392, 34.0064863]
 	}
 } {
 	"_id": ObjectId("54613818d2ed2daf885a2052"),
 	"id": 112871,
-	"name": "Scharna
-gle Branch",
+	"name": "Scharnagle Branch",
 	"type": "Stream",
 	"country_name": null,
 	"height": 234,
