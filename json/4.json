@@ -6,8 +6,7 @@
 	"country_name": null,
 	"height": 247,
 	"loc": {
-		"type
-": "Point",
+		"type": "Point",
 		"coordinates": [-86.3905392, 34.0064863]
 	}
 } {
@@ -40,8 +39,7 @@
 	"country_name": null,
 	"height": 190,
 	"loc": {
-		"t
-ype": "Point",
+		"type": "Point",
 		"coordinates": [-86.5811027, 34.1542634]
 	}
 }
