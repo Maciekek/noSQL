@@ -117,9 +117,9 @@ Ciekawą rzecz można również zaobserwować gdy odłączy się laptopa od zasi
 
 ## 1c
 
-[Skrypt](convert.js) 
 
-Skrypt zmieniający format danych String na tablice tagów, wykrywanie odbywa się po spacji
+
+[Skrypt](convert.js)  zmieniający format danych String na tablice tagów, wykrywanie odbywa się po spacji
 ```
  $ node convert.js    
 ```
@@ -136,6 +136,7 @@ Skrypt zmieniający format danych String na tablice tagów, wykrywanie odbywa si
 
 ## 1d
 
+##### Opis:
 Zbiór danych: http://geonames.usgs.gov/docs/stategaz/AL_Features_20141005.zip
 
 Przygotowanie danych: 
@@ -153,6 +154,7 @@ Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
 ```
+---------------
 #####1
 Znajdz punkty w odległość od 100 do 65000
 Query:
