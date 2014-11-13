@@ -78,10 +78,12 @@ i Polygon).
 ```  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
 ```
- 
- real  22m2.507s  
- user  3m32.282s  
- sys   2m22.363s
+|  Rodzaj               | Czas              | 
+|-----------------------|-------------------|
+|real                   |   22m2.507s       | 
+|user                   |   3m32.282s       |  
+|sys                    |   2m22.363s       |  
+
  
 Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby komputer do takich operacji), jednak jak widać po zdjęciu system zostawił sobie trochę pamięci to innych procesów:
 ![zużycie pamięci przez 2unixUsage](img/2unixUsage.png)
@@ -92,9 +94,11 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
 
-real 39m2.516s
-user 11m45.381s
-sys  3m11m127s
+|  Rodzaj               | Czas              | 
+|-----------------------|-------------------|
+|real                   |   39m2.516s       | 
+|user                   |   11m45.381s      |  
+|sys                    |   3m11m127s       |  
  
 Całkowity czas imporotowania do bazy to: 39m16s
 
@@ -120,9 +124,13 @@ Skrypt zmieniający format danych String na tablice tagów, wykrywanie odbywa si
  $ node convert.js    
 ```
 ```
-real  14m31.145s                                                                                                          
-user  09m11.126s                                                                                                          
-sys   0m11.127s                                                                                                                  
+   
+|  Rodzaj               | Czas              | 
+|-----------------------|-------------------|
+|real                   |   14m31.145s      | 
+|user                   |   09m11.126s      |  
+|sys                    |   0m11.127s       | 
+
 ```
 
 
