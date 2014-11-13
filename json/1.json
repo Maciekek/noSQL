@@ -1,34 +1,29 @@
 {
 	"_id": ObjectId("54613818d2ed2daf885a2055"),
 	"id": 112874,
-	"name": "Thomas
-Branch",
+	"name": "Thomas Branch",
 	"type": "Stream",
 	"country_name": null,
 	"height": 151,
 	"loc": {
-		"ty
-pe": "Point",
+		"type": "Point",
 		"coordinates": [-86.6905413, 33.2742799]
 	}
 } {
 	"_id": ObjectId("54613818d2ed2daf885a2044"),
 	"id": 112857,
-	"name": "Island
-Branch",
+	"name": "Island Branch",
 	"type": "Stream",
 	"country_name": null,
 	"height": 67,
 	"loc": {
-		"typ
-e": "Point",
+		"type": "Point",
 		"coordinates": [-87.3586122, 33.4506682]
 	}
 } {
 	"_id": ObjectId("54613818d2ed2daf885a2039"),
 	"id": 112845,
-	"name": "Dry Cre
-ek",
+	"name": "Dry Creek",
 	"type": "Stream",
 	"country_name": null,
 	"height": 149,
