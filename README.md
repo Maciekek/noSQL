@@ -3,10 +3,32 @@
 - [System info](#system-info)
 - [Starting MongoDB](#starting-mongodb)
 - [Short replies](#short-replies)
+    - [Zadanie 1a](#1a)
+        - [mongoDB](#mongodb)
+        - [PostgreSQL](#postgresql)
+    - [Zadanie 1b](#1b)
+        - [mongoDB](#mongodb-1)
+        - [PostgreSQL](#postgresql-1)
+    - [Zadanie 1c](#1c)
+    - [Zadanie 1d](#1d)
 - [Extended Replies](#extended-replies)
-    - [1a](#1a-1)
-    - [1c](#1c-1)
-    - [1d](#1d-1)
+    - [Zadanie 1a](#1a-1)
+        - [Zmiana kodowanie (mongoDB)](#zmiana-kodowanie)
+        - [Import do baz danych](#import-danych-do-bazy)
+            - [MongoDB](#mongodb-2)
+            - [PostgreSQL](#postgresql-2)
+    - [Zadanie 1c](#1c-1)
+    - [Zadanie 1d](#1d-1)
+        - [Przygotowanie danych](#przygotowanie-danych)
+        - [Import do bazy danych](#import-danych-do-bazy-1)
+        - [Przygotowanie kolekcji](#przygotowanie-kolekcji-geo-converttojsonjs)
+        - [1 przykład](#1)
+        - [2 przykład](#2)
+        - [3 przykład](#3)
+        - [3 przykład](#4)
+        - [5 przykład](#5)
+        - [6 przykład](#6)
+- [Dodatkowe informacje o kolekcji geoAlabama](#dodatkowe-informacje-o-kolekcji-geoalabama)
 - [Podsumowanie czasów](#podsumowanie-czasowe)
 
     
@@ -32,13 +54,13 @@ mongod --smallfiles --dbpath path_to_cluster
 Zadanie 1a polega na zaimportowaniu, do baz danych
 uruchomionych na swoim komputerze, danych z pliku Train.csv 
 ```
-###MongoDB:
+####MongoDB:
 ```sh  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
 
-###PostgreSQL 
+####PostgreSQL 
 
 ```SQL
 CREATE TABLE train(
@@ -95,7 +117,7 @@ i Polygon).
 # Extended Replies
 
 ##1a
-### Zmiana kodowanie
+#### Zmiana kodowanie
 ```sh  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
 ```
@@ -110,7 +132,7 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 ![zużycie pamięci przez 2unixUsage](img/2unixUsage.png)
 
 
-###Import danych do bazy
+###Import danych do baz
 ####MongoDB
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
