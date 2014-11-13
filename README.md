@@ -32,12 +32,24 @@ mongod --smallfiles --dbpath path_to_cluster
 Zadanie 1a polega na zaimportowaniu, do baz danych
 uruchomionych na swoim komputerze, danych z pliku Train.csv 
 ```
-
+###MongoDB:
 ```  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
 
+###PostgreSQL 
+
+```
+CREATE TABLE train(
+   id TEXT PRIMARY KEY     NOT NULL,
+   Title           TEXT,
+   Body            TEXT,
+   Tags        TEXT
+);
+
+copy train(Id,Title,Body,Tags) from 'C:\Train.csv' with delimiter ',' csv header
+```
 
 
 ##1b
@@ -75,7 +87,7 @@ i Polygon).
 
 ##1a
 ##### Zmiana kodowanie
-```  
+```sh  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
 ```
 |  Rodzaj               | Czas              | 
@@ -90,6 +102,7 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 
 
 ##### Import danych do bazy
+######MongoDB
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
@@ -113,7 +126,10 @@ Ciekawą rzecz można również zaobserwować gdy odłączy się laptopa od zasi
 ![komputer na baterii](img/unplaged.png)
 
 
- 
+######PostgreSQL
+
+Importowanie zajęło 29 minut i 21 sekund.
+
 
 ## 1c
 
