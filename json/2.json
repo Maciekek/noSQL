@@ -1,21 +1,18 @@
 {
 	"_id": ObjectId("54613818d2ed2daf885a2032"),
 	"id": 112838,
-	"name": "Blue Sp
-ring",
+	"name": "Blue Spring",
 	"type": "Spring",
 	"country_name": null,
 	"height": 210,
 	"loc": {
-		"type
-": "Point",
+		"type": "Point",
 		"coordinates": [-86.5938821, 34.7862014]
 	}
 } {
 	"_id": ObjectId("54613818d2ed2daf885a2038"),
 	"id": 112844,
-	"name": "Corneli
-us Mountain",
+	"name": "Cornelius Mountain",
 	"type": "Summit",
 	"country_name": null,
 	"height": 296,
@@ -26,8 +23,7 @@ us Mountain",
 } {
 	"_id": ObjectId("54613818d2ed2daf885a2039"),
 	"id": 112845,
-	"name": "Dry Cre
-ek",
+	"name": "Dry Creek",
 	"type": "Stream",
 	"country_name": null,
 	"height": 149,
@@ -38,8 +34,7 @@ ek",
 } {
 	"_id": ObjectId("54613818d2ed2daf885a204c"),
 	"id": 112865,
-	"name": "Noahs A
-rk",
+	"name": "Noahs Ark",
 	"type": "Summit",
 	"country_name": null,
 	"height": 327,
@@ -50,14 +45,12 @@ rk",
 } {
 	"_id": ObjectId("54613818d2ed2daf885a2059"),
 	"id": 112878,
-	"name": "Aaron B
-ranch",
+	"name": "Aaron Branch",
 	"type": "Stream",
 	"country_name": null,
 	"height": 217,
 	"loc": {
-		"typ
-e": "Point",
+		"type": "Point",
 		"coordinates": [-86.4116516, 34.1481515]
 	}
 }
