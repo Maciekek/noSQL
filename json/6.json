@@ -1,8 +1,7 @@
 {
 	"_id": ObjectId("54613818d2ed2daf885a202d"),
 	"id": 112833,
-	"name": "Bear Cr
-eek",
+	"name": "Bear Creek",
 	"type": "Stream",
 	"country_name": null,
 	"height": 36,
@@ -13,8 +12,7 @@ eek",
 } {
 	"_id": ObjectId("54613818d2ed2daf885a2047"),
 	"id": 112860,
-	"name": "Miles C
-reek",
+	"name": "Miles Creek",
 	"type": "Stream",
 	"country_name": null,
 	"height": 28,
