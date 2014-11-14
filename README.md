@@ -16,7 +16,8 @@
     - [Zadanie 1a](#1a-1)
         - [Zmiana kodowanie (mongoDB)](#zmiana-kodowanie)
         - [Import do baz danych](#import-danych-do-bazy)
-            - [MongoDB](#mongodb-2)
+            - [MongoDB 2.6](#mongodb-26-1)
+            - [MongoDB 2.8rc](#mongodb-28rc-1)
             - [PostgreSQL](#postgresql-2)
     - [Zadanie 1c](#1c-1)
     - [Zadanie 1d](#1d-1)
@@ -140,7 +141,7 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 
 
 ###Import danych do baz
-####MongoDB
+####MongoDB 2.6
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
@@ -151,7 +152,16 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 |user                   |   11m45.381s      |  
 |sys                    |   3m11m127s       |  
  
-Całkowity czas imporotowania do bazy to: 39m16s
+####MongoDB 2.8rc
+```  
+  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
+```
+
+|  Rodzaj               | Czas              | 
+|-----------------------|-------------------|
+|real                   |   38m32.348s       | 
+|user                   |   10m11.381s      |  
+|sys                    |   2m09m127s       |
 
 
 Na monitorze zasobów start importera jest bardzo dobrze widoczny: 
