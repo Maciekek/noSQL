@@ -54,7 +54,13 @@ mongod --smallfiles --dbpath path_to_cluster
 Zadanie 1a polega na zaimportowaniu, do baz danych
 uruchomionych na swoim komputerze, danych z pliku Train.csv 
 ```
-####MongoDB:
+####MongoDB 2.6:
+```sh  
+ $ time 2unix.sh Train.csv TrainPrepare.csv   
+ $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
+```
+
+####MongoDB 2.8rc:
 ```sh  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
