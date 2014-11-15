@@ -204,13 +204,33 @@ Importowanie zajęło 29 minut i 21 sekund.
 
 ## 1c
 
+Przygotowałem 2 skrytpy zmieniające format danych String na tablice tagów. W tych skryptach wykrywanie stringa odbywa się poprzez wykrycie spacji. Po spacji następuje rozdzielenie string na elementy tablicy. 
+Skrtypty różnią się sposobem zapisu zmienionych danych.
 
+[Skrypt 1](convert.js) działa w taki sposób, że znajduje rekord, wprowadza w nim zmiany i uaktualnia w danej kolecji dany rekord. 
 
-[Skrypt](convert.js)  zmieniający format danych String na tablice tagów, wykrywanie odbywa się po spacji
+[Skrypt 2](convert2.js) działa w trochę inny sposób. Skrypt znajduję rekord, wprowadza w nim zmiany i dodaje do swojej wewnętrznej listy. Jeśli lista osiągnie wielkość 1000 rekordów, taka paczka jest przesyłania do nowej kolekcji. 
+
+Czasy tych dwóch skryptów puszczonych na tej samej kolekcji są trochę inne.
+
 ```
  $ npm install
  $ node convert.js    
 ```
+
+###Tabelka czasowa
+
+|  Rodzaj               | Mongo 2.6-[Skrypt 1](convert.js) | Mongo 2.6-[Skrypt 2](convert2.js) | MongoDB 2.8rc-[Skrypt 1](convert.js) | MongoDB 2.8rc-[Skrypt 2](convert2.js)
+|-----------------------|-------------------|--------------------|---------------------|---------------------|
+|real                   |   62m28.113s      | 47m52.190s         | 58m31.145s   | 47m52.190s
+|user                   |   05m09.321s      |  03m09.111s        | 04m11.126s    | 03m09.111s
+|sys                    |   01m30.125s      |  0m00.127s         | 01m15.127s     | 0m00.127s
+
+
+
+
+Jak widać czas skryptu wysyłającego paczki jest trochę krótszy. 
+
 
 #####Przykładowy rekord po puszczeniu [Skrypt](convert.js)
 ```json
@@ -233,12 +253,6 @@ Importowanie zajęło 29 minut i 21 sekund.
 }
 ```
 
-   
-|  Rodzaj               | Czas              | 
-|-----------------------|-------------------|
-|real                   |   18m31.145s      | 
-|user                   |   01m11.126s      |  
-|sys                    |   0m15.127s       | 
 
 
 
