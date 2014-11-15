@@ -4,8 +4,7 @@
 - [Starting MongoDB](#starting-mongodb)
 - [Short replies](#short-replies)
     - [Zadanie 1a](#1a)
-        - [mongoDB 2.6](#mongodb-26)
-        - [mongoDB 2.8rc](#mongodb-28rc)
+        - [mongoDB 2.8rc](#mongodb)
         - [PostgreSQL](#postgresql)
     - [Zadanie 1b](#1b)
         - [mongoDB](#mongodb-1)
@@ -143,6 +142,7 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 
 ###Import danych do baz
 
+####MongoDB
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
@@ -191,7 +191,7 @@ Ciekawą rzecz można również zaobserwować gdy odłączy się laptopa od zasi
 
 ####PostgreSQL
 
-Importowanie zajęło 29 minut i 21 sekund.
+Importowanie zajęło 45 minut i 21 sekund.
 
 
 ## 1c
