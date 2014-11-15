@@ -256,17 +256,17 @@ Zbiór zawiera dane na temat punktów szczegołnych (takich jak rzeka, czy cment
 Sciągniętą paczkę trzeba wypakować i odpowiednio dane przygotować do współpracy.
 
 
-###### Przygotowanie danych: 
+##### Przygotowanie danych: 
 
 ```
 $ tr tr '|' ',' < AL_Features_20141005.txt > geo.txt
 ```
 
-###### Import danych do bazy:
+##### Import danych do bazy:
 ```
 $mongoimport -c geo -type csv -file geo.txt --headerline
 ```
-###### Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
+##### Przygotowanie kolekcji ``geo`` [convertToJSON.js](convertToJSON.js)
 ```
 $ db.geoAlabama.ensureIndex({"loc" : "2dsphere"})
 $ var punkt = {type: "Point", coordinates: [ -86.8877693,33.4698294]} 
