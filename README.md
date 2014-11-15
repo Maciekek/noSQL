@@ -142,27 +142,18 @@ Jak widać proces zmiany znaków zajął dość sporo czasu (też słaby kompute
 
 
 ###Import danych do baz
-####MongoDB 2.6
+
 ```  
   $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
 
-|  Rodzaj               | Czas              | 
-|-----------------------|-------------------|
-|real                   |   39m2.516s       | 
-|user                   |   11m45.381s      |  
-|sys                    |   3m11m127s       |  
+|  Rodzaj               | MongoDB 2.6              |  MongoDB 2.8rc |
+|-----------------------|-------------------|--------------------|
+|real                   |   39m2.516s       |   38m32.348s  |
+|user                   |   11m45.381s      |    10m11.381s     |
+|sys                    |   3m11m127s       |  2m09m127s    |
  
-####MongoDB 2.8rc
-```  
-  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
-```
 
-|  Rodzaj               | Czas              | 
-|-----------------------|-------------------|
-|real                   |   38m32.348s       | 
-|user                   |   10m11.381s      |  
-|sys                    |   2m09m127s       |
 
 
 Na monitorze zasobów start importera jest bardzo dobrze widoczny: 
