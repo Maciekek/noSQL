@@ -238,6 +238,79 @@ db.airline.aggregate([{
 ```
 
 
-```
+##Skrypt w JavaScript na wykonywanie i parsowanie agregacji.
 
+[Skrypt](aggregate.js)
+
+W kodzie programu zaszyte są takie same agregacje jak wyżej.
+
+Wynik działania programu:
+
+```text
+MongoDB Połączono!
+
+-----------------------------------
+Collection count = 1406309
+
+-----------------------------------
+Samoloty anulowane w danym miesiacu
+
+Samolot numer: 20366 anulowany: 8987 razy
+Samolot numer: 19393 anulowany: 4439 razy
+Samolot numer: 20398 anulowany: 4205 razy
+Samolot numer: 19790 anulowany: 2997 razy
+Samolot numer: 20304 anulowany: 2663 razy
+
+-----------------------------------
+Najpopularniejsze porty lotnicze
+
+Port: Atlanta, GA lotów: 91468
+Port: Chicago, IL lotów: 84317
+Port: Dallas/Fort Worth, TX lotów: 68481
+Port: Houston, TX lotów: 58076
+Port: Los Angeles, CA lotów: 54081
+
+-----------------------------------
+Największe średnie opóźnienia w miastach portów lotniczych
+
+Miasto:  Klamath Falls, OR średnia liczba: 50.875
+Miasto:  Bangor, ME średnia liczba: 25.958333333333332
+Miasto:  Yakutat, AK średnia liczba: 24.666666666666668
+Miasto:  Santa Maria, CA średnia liczba: 21.70212765957447
+Miasto:  Sitka, AK średnia liczba: 18.61111111111111
+
+-----------------------------------
+Porty lotnicze z najwieksza iloscia anulowanych lotow
+
+Port lotniczy: Chicago, IL liczba anulowań: 7573 razy
+Port lotniczy: Atlanta, GA liczba anulowań: 5192 razy
+Port lotniczy: New York, NY liczba anulowań: 3863 razy
+Port lotniczy: Dallas/Fort Worth, TX liczba anulowań: 2874 razy
+Port lotniczy: Newark, NJ liczba anulowań: 2809 razy
+
+-----------------------------------
+Samoloty anulowane ogółem
+
+Samolot numer: 20366 anulowany: 18432 razy
+Samolot numer: 20398 anulowany: 8358 razy
+Samolot numer: 19393 anulowany: 8275 razy
+Samolot numer: 20304 anulowany: 6073 razy
+Samolot numer: 19790 anulowany: 5709 razy
+
+-----------------------------------
+Najpopularniejsze linie lotnicze
+
+Numer lini: 19393 wykonanych lotów: 277527
+Numer lini: 19790 wykonanych lotów: 180224
+Numer lini: 20366 wykonanych lotów: 173956
+Numer lini: 20304 wykonanych lotów: 148886
+Numer lini: 19805 wykonanych lotów: 132707
+
+-----------------------------------
+Liczba opóźnień spowodowych pogodą w długości opóźnienia pomiędzy 15 - 20 minut
+
+
+Liczba opóźnień 2225
+
+```
 
