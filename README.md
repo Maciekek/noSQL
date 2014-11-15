@@ -13,10 +13,9 @@
     - [Zadanie 1d](#1d)
 - [Extended Replies](#extended-replies)
     - [Zadanie 1a](#1a-1)
-        - [Zmiana kodowanie (mongoDB)](#zmiana-kodowanie)
+        - [Zmiana kodowania (mongoDB)](#zmiana-kodowania)
         - [Import do baz danych](#import-danych-do-bazy)
-            - [MongoDB 2.6](#mongodb-26-1)
-            - [MongoDB 2.8rc](#mongodb-28rc-1)
+            - [MongoDB](#mongodb-1)
             - [PostgreSQL](#postgresql-2)
     - [Zadanie 1c](#1c-1)
          - [Tabelka czasowa](#tabelka-czasowa)
@@ -125,7 +124,7 @@ i Polygon).
 # Extended Replies
 
 ##1a
-#### Zmiana kodowanie
+#### Zmiana kodowania
 ```sh  
  $ time 2unix.sh Train.csv TrainPrepare.csv   
 ```
