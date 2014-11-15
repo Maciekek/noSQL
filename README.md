@@ -4,7 +4,7 @@
 - [Starting MongoDB](#starting-mongodb)
 - [Short replies](#short-replies)
     - [Zadanie 1a](#1a)
-        - [mongoDB 2.8rc](#mongodb)
+        - [mongoDB](#mongodb)
         - [PostgreSQL](#postgresql)
     - [Zadanie 1b](#1b)
         - [mongoDB](#mongodb-1)
