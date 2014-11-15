@@ -20,6 +20,7 @@
             - [MongoDB 2.8rc](#mongodb-28rc-1)
             - [PostgreSQL](#postgresql-2)
     - [Zadanie 1c](#1c-1)
+         - [Tabelka czasowa](#tabelka-czasowa)
     - [Zadanie 1d](#1d-1)
         - [Przygotowanie danych](#przygotowanie-danych)
         - [Import do bazy danych](#import-danych-do-bazy-1)
