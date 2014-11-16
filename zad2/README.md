@@ -48,6 +48,8 @@ db.airtest.aggregate({
 { "_id" : 19790, "cancelled" : 5709 }
 ```
 
+![liczba anulowań](img/cancelledByAirLine.png)
+
 -----
 
 ###2 Agregacja pokazująca numery lini lotniczych z największą liczbą anulowań w miesiącu styczniu
@@ -83,6 +85,7 @@ db.airtest.aggregate({
 { "_id" : 20304, "cancelled" : 2663 }
 ```
 
+![liczba anulowań w wybranym miesiącu](img/idByMonthCancelled.png)
 
 
 ###3 Porty lotnicze z największą liczbą anulowanych lotów
@@ -121,6 +124,8 @@ db.airline.aggregate({
 ```
 
 
+![Porty lotnicze z największą liczbą anulować](img/airPortCancelled.png)
+
 ###4 Najpopularniejsze porty lotnicze
 
 ```json
@@ -150,6 +155,7 @@ db.airline.aggregate([{
 { "_id" : "Los Angeles, CA", "value" : 54081 }
 ```
 
+![Najpopularniejsze porty lotnicze](img/PopularityAirPort.png)
 
 ###5 Najpopularniejsze linie lotnicze
 
@@ -180,6 +186,8 @@ db.airline.aggregate([{
 { "_id" : 19805, "value" : 132707 }
 ```
 
+![Najpopularniejsze linie lotnicze](img/PopularityAirLine.png)
+
 ###6 Liczba opóźnień spowodowanych złymi warunkami atmosferycznymi (do 15 do 20 minut)
 
 
@@ -206,6 +214,9 @@ db.airline.aggregate([{
 ```json
 { "_id" : "Weather_cast", "count" : 2225 }
 ```
+
+
+
 
 ###7 Miasta portów lotniczych z największym średnim czasem opóźnienia
 
@@ -236,6 +247,8 @@ db.airline.aggregate([{
 { "_id" : { "city" : "Santa Maria, CA" }, "avg_score" : 21.70212765957447 }
 { "_id" : { "city" : "Sitka, AK" }, "avg_score" : 18.61111111111111 }
 ```
+
+![Średni czas opóźnień](img/avgDelay.png)
 
 
 ##Skrypt w JavaScript na wykonywanie i parsowanie agregacji.
