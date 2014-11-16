@@ -121,75 +121,7 @@ public class Main {
         getDelayByWeather(coll);
         System.out.println();
         System.out.print("KONIEC");
-//        System.out.println(coll.findOne());
-
-// CHECKSTYLE:OFF
-//
-//
-//
-//            // connect to the local database server
-//            MongoClient mongoClient = new MongoClient();
-//
-//            // get handle to "mydb"
-//            DB db = mongoClient.getDB("mydb");
-//
-//            // Authenticate - optional
-//            // boolean auth = db.authenticate("foo", "bar");
-//
-//            // Add some sample data
-//            DBCollection coll = db.getCollection("aggregationExample");
-//            coll.insert(new BasicDBObjectBuilder()
-//                    .add("employee", 1)
-//                    .add("department", "Sales")
-//                    .add("amount", 71)
-//                    .add("type", "airfare")
-//                    .get());
-//            coll.insert(new BasicDBObjectBuilder()
-//                    .add("employee", 2)
-//                    .add("department", "Engineering")
-//                    .add("amount", 15)
-//                    .add("type", "airfare")
-//                    .get());
-//            coll.insert(new BasicDBObjectBuilder()
-//                    .add("employee", 4)
-//                    .add("department", "Human Resources")
-//                    .add("amount", 5)
-//                    .add("type", "airfare")
-//                    .get());
-//            coll.insert(new BasicDBObjectBuilder()
-//                    .add("employee", 42)
-//                    .add("department", "Sales")
-//                    .add("amount", 77)
-//                    .add("type", "airfare")
-//                    .get());
-//
-//            // create our pipeline operations, first with the $match
-//            DBObject match = new BasicDBObject("$match", new BasicDBObject("type", "airfare"));
-//
-//            // build the $projection operation
-//            DBObject fields = new BasicDBObject("department", 1);
-//            fields.put("amount", 1);
-//            fields.put("_id", 0);
-//            DBObject project = new BasicDBObject("$project", fields );
-//
-//            // Now the $group operation
-//            DBObject groupFields = new BasicDBObject( "_id", "$department");
-//            groupFields.put("average", new BasicDBObject( "$avg", "$amount"));
-//            DBObject group = new BasicDBObject("$group", groupFields);
-//
-//            // Finally the $sort operation
-//            DBObject sort = new BasicDBObject("$sort", new BasicDBObject("average", -1));
-//
-//            // run aggregation
-//            List<DBObject> pipeline = Arrays.asList(match, project, group, sort);
-//            AggregationOutput output = coll.aggregate(pipeline);
-//
-//            // Output the results
-//            for (DBObject result : output.results()) {
-//                System.out.println(result);
-//            }
-//
-//
+    
 
     }
 }
