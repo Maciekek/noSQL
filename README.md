@@ -9,7 +9,7 @@
         - [MongoDB 2.8rc + WT](#mongodb-28rc--wiredtiger)
         - [PostgreSQL](#postgresql)
     - [Zadanie 1b](#1b)
-        - [MongoDB](#mongodb-1)
+        - [MongoDB](#mongodb)
         - [PostgreSQL](#postgresql-1)
     - [Zadanie 1c](#1c)
     - [Zadanie 1d](#1d)
