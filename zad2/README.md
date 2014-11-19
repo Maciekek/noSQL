@@ -1,6 +1,13 @@
 #Zadanie 2
 ---
 
+
+- [Dane](#dane)
+- [Liczba rekordów](#liczba-rekordów)
+- [Agregacje](#agregacje)
+- [Skrypt JavaScript](#skrypt-w-javascript-na-wykonywanie-i-parsowanie-agregacji)
+
+
 ##Dane 
 
 Zbiorem danych jakim się posługuje przy tym zadaniu są dane na temat ruchu lotniczego w Stanach Zjednoczonych. Średnio jeden miesiąc zawiera około 500tyś. rekordów. Przy moich agregacjach użyje danych z okresu 3 miesięcy.
@@ -250,6 +257,7 @@ db.airline.aggregate([{
 
 ![Średni czas opóźnień](img/avgDelay.png)
 
+#JavaScript
 
 ##Skrypt w JavaScript na wykonywanie i parsowanie agregacji.
 
@@ -327,3 +335,8 @@ Liczba opóźnień 2225
 
 ```
 
+
+
+#Java
+
+[Kod](mongo/src/main/java/Main.java)
