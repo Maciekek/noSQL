@@ -4,7 +4,9 @@
 - [Starting MongoDB](#starting-mongodb)
 - [Short replies](#short-replies)
     - [Zadanie 1a](#1a)
-        - [MongoDB](#mongodb)
+        - [MongoDB 2.6](#mongodb-26)
+        - [MongoDB 2.8rc](#mongodb-28rc)
+        - [MongoDB 2.8rc + WT](#mongodb-28rc--wiredtiger)
         - [PostgreSQL](#postgresql)
     - [Zadanie 1b](#1b)
         - [MongoDB](#mongodb-1)
@@ -66,6 +68,17 @@ uruchomionych na swoim komputerze, danych z pliku Train.csv
  $ time 2unix.sh Train.csv TrainPrepare.csv   
  $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
 ```
+
+####MongoDB 2.8rc + Wiredtiger
+```sh
+ $ mongod --storageEngine wiredtiger --dbpath .
+ $ time mongoimport -c train --type csv --headerline --file TrainPrepared.csv 
+ 
+ ERROR: "error inserting documents: WiredTigerRecordStore ::insertRecord 12: Not enough space" 
+ ```
+ Error spowodował wyłączenie serwera. Mongoimport zaimportował około 500 tysięcy rekordów i mimo, że pamieć na dysku jak i  
+  ram jest dostępna to wywala błąd. Błąd powtórzony również kiedy wyłączyłem wszystkie programy obciążające system 
+ 
 
 ####PostgreSQL 
 
