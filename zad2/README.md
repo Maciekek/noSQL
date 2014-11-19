@@ -6,6 +6,7 @@
 - [Liczba rekordów](#liczba-rekordów)
 - [Agregacje](#agregacje)
 - [Skrypt JavaScript](#skrypt-w-javascript-na-wykonywanie-i-parsowanie-agregacji)
+- [Java](#java)
 
 
 ##Dane 
