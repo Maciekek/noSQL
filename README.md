@@ -76,8 +76,7 @@ uruchomionych na swoim komputerze, danych z pliku Train.csv
  
  ERROR: "error inserting documents: WiredTigerRecordStore ::insertRecord 12: Not enough space" 
  ```
- Error spowodował wyłączenie serwera. Mongoimport zaimportował około 500 tysięcy rekordów i mimo, że pamieć na dysku jak i  
-  ram jest dostępna to wywala błąd. Błąd powtórzony również kiedy wyłączyłem wszystkie programy obciążające system 
+Error spowodował wyłączenie serwera. Mongoimport zaimportował około 500 tysięcy rekordów i mimo, że pamieć na dysku jak i ram jest dostępna to wywala błąd. Błąd powtórzony również kiedy wyłączyłem wszystkie programy obciążające system 
  
 
 ####PostgreSQL 
